@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kpop-pink: #ff2a85;
+  --color-kpop-hotpink: #ff007f;
+  --color-kpop-magenta: #e60067;
+  --color-kpop-purple: #9b30ff;
+  --color-kpop-violet: #6b149b;
+  --color-kpop-dark: #1b0528;
+  --color-kpop-darker: #100219;
+  --color-kpop-cyan: #00f0ff;
+  --color-kpop-yellow: #ffea00;
+  --color-kpop-gold: #ffd152;
+  --color-kpop-white: #fff5fa;
+
+  --font-outfit: "Outfit", sans-serif;
+  --font-fredoka: "Fredoka", sans-serif;
+  --font-baloo: "Baloo 2", sans-serif;
+  --font-pacifico: "Pacifico", cursive;
+}
+
+@layer base {
+  body {
+    @apply bg-[#140320] text-white font-outfit overflow-x-hidden w-full min-h-dvh;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #root {
+    @apply w-full min-h-dvh relative overflow-x-hidden;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+/* ===============================
+   ANIMACIONES CLAVE K-POP & DISCO
+   =============================== */
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(100%) drop-shadow(0 0 15px rgba(255, 42, 133, 0.4));
+  }
+
+  50% {
+    transform: scale(1.035);
+    filter: brightness(110%) drop-shadow(0 0 25px rgba(255, 0, 127, 0.7));
+  }
+}
+
+.animate-breathe {
+  animation: breathe 3.4s ease-in-out infinite;
+}
+
+@keyframes floatHeavy {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+
+  66% {
+    transform: translateY(7px) rotate(-3deg);
+  }
+}
+
+.animate-float-heavy {
+  animation: floatHeavy 4.2s ease-in-out infinite;
+}
+
+.animate-float-heavy-reverse {
+  animation: floatHeavy 5s ease-in-out infinite reverse;
+}
+
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.07);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.07);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes discoSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-disco-spin {
+  animation: discoSpin 18s linear infinite;
+}
+
+@keyframes discoGleam {
+
+  0%,
+  100% {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(0, 240, 255, 0.5));
+  }
+
+  50% {
+    filter: brightness(1.3) drop-shadow(0 0 35px rgba(255, 0, 127, 0.8));
+  }
+}
+
+.animate-disco-gleam {
+  animation: discoGleam 2.5s ease-in-out infinite;
+}
+
+/* Animaciones de interacción táctil */
+.interact-jello {
+  animation: jello 0.85s both;
+}
+
+@keyframes jello {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.interact-rubber {
+  animation: rubberBand 0.8s both;
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.interact-spin {
+  animation: spinTap 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes spinTap {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Estilos de scrollbar personalizados K-Pop */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #140320;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff2a85;
+  border-radius: 9999px;
+}
