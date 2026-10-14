@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a0526" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- SEO Primario -->
+  <title>¡Mis 5 Añitos! - Sofía Moreno</title>
+  <meta name="title" content="¡Mis 5 Añitos! - Sofía Moreno" />
+  <meta name="description"
+    content="Invitación oficial al cumpleaños de 5 años de Sofía Moreno. Fiesta temática K-Pop & Boliche en Salón de Jubilados Barrio Siglo XXI, Salta Capital." />
+  <meta name="keywords"
+    content="Sofía Moreno, cumpleaños, 5 años, fiesta infantil, K-Pop, boliche, invitación digital, Salta Capital." />
+  <meta name="author" content="Sofía Moreno" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Favicon y Apple Touch Icon -->
+  <link rel="icon" type="image/png" href="/corona.png" />
+  <link rel="apple-touch-icon" href="/corona.png" />
+
+  <!-- Preload de recursos críticos para máxima velocidad -->
+  <link rel="preload" as="image" href="/kpop-runi.png" />
+  <link rel="preload" as="image" href="/bola-boliche.png" />
+  <link rel="preload" as="image" href="/numero-5.png" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Cumple de Sofía Moreno" />
+  <meta property="og:title" content="¡Mis 5 Añitos! - Sofía Moreno" />
+  <meta property="og:description"
+    content="Te invito a festejar mis 5 añitos a puro K-Pop y boliche. Confirmá tu asistencia y mirá todos los detalles del evento." />
+  <meta property="og:image" content="/kpop-runi.png" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="¡Mis 5 Añitos! - Sofía Moreno" />
+  <meta name="twitter:description"
+    content="Te invito a festejar mis 5 añitos a puro K-Pop y boliche. Confirmá tu asistencia y mirá todos los detalles del evento." />
+  <meta name="twitter:image" content="/kpop-runi.png" />
+
+  <!-- Datos Estructurados JSON-LD (Schema.org Event) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Cumpleaños de 5 de Sofía Moreno - Fiesta K-Pop & Boliche",
+      "description": "Festejo de 5 años de Sofía Moreno con baile, show K-Pop y disco party.",
+      "startDate": "2026-11-28T18:00:00-03:00",
+      "endDate": "2026-11-28T22:00:00-03:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Salón de Jubilados de Barrio Siglo XXI",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Barrio Siglo XXI",
+          "addressLocality": "Salta Capital",
+          "addressRegion": "Salta",
+          "addressCountry": "AR"
+        }
+      },
+      "organizer": {
+        "@type": "Person",
+        "name": "Sofía Moreno"
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@400;600;700&family=Outfit:wght@400;600;700;800;900&family=Pacifico&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-[#140320] text-white selection:bg-pink-500 selection:text-white antialiased">
+  <noscript>Necesitas activar JavaScript para ver esta invitación.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Script observador para ocultar marcas de agua de Netlify -->
+  <script>
+    const observer = new MutationObserver(() => {
+      document.querySelectorAll('iframe, div[id*="netlify"], div[id*="nl-"]').forEach(el => {
+        if (el.id.includes('netlify') || el.id.includes('nl-') || (el.src && el.src.includes('netlify'))) {
+          el.remove();
+        }
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
+</body>
+
+</html>
