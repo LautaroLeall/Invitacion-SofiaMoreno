@@ -1,0 +1,85 @@
+# ==========================================
+# GITIGNORE - INVITACIÓN SOFÍA MORENO (VITE + REACT)
+# ==========================================
+
+# Dependencias 
+node_modules/
+.pnp
+.pnp.js
+
+# Salidas de compilación y producción
+dist/
+dist-ssr/
+build/
+out/
+.output/
+
+# Logs de error y ejecución
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Archivos de Entorno y Secretos (variables privadas)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Cache de herramientas de desarrollo
+.vite/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.turbo/
+
+# Despliegues temporales de Netlify y Vercel
+.netlify/
+.vercel/
+
+# Archivos del Sistema Operativo
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Archivos de Editores e IDEs
+# Visual Studio Code
+.vscode/*
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Editores varios y temporales
+*.sublime-workspace
+*.sublime-project
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
